@@ -1,0 +1,140 @@
+.hero-banner{
+
+    &:before,
+    &:after{
+        content: '';
+        width: 10px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    &:after{
+        right: 0;
+    }
+
+    height: 270px;
+
+    @media only screen and(min-width:480px){
+        height: 0;
+        padding-bottom: 56.25%;
+
+        &:before,
+        &:after{
+            width: 20px;
+        }
+    }
+
+    @media only screen and(min-width:960px){
+        &:before,
+        &:after{
+            width: 30px;
+        }
+    }
+
+
+
+    @media only screen and(min-width:1280px){
+        height: 720px;
+        padding-bottom: 0;
+
+    }
+
+    @media only screen and(min-width:1600px){
+        height: 0;
+        padding-bottom: 45%;
+    }
+
+    .flickity-viewport,
+    .flickity-slider,
+    .banner-item{
+        display: block;
+        position: absolute;
+        height: 100%!important;
+        width: 100%;
+        top: 0;
+    }
+
+    .banner-item{
+        border: 10px solid white;
+        @extend %fill-bg;
+
+        @media only screen and(min-width:480px){
+            border-width: 20px;
+        }
+
+        @media only screen and(min-width:960px){
+            border-width: 30px;
+        }
+
+        .banner-overlay{
+            @extend %fill-all;
+            z-index: 1;
+        }
+    }
+
+    .banner-item-footer{
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        height: 80px;
+        line-height: 80px;
+        font-size: 0;
+
+        *{
+            vertical-align: top;
+        }
+
+        h2{
+            padding: 0 30px;
+            font-size: 24px;
+            background-color: $color-light;
+            display: inline-block;
+        }
+
+        a{
+            position: relative;
+            height: inherit;
+            width: 90px;
+            display: inline-block;
+
+            svg{
+                @include center(true,true);
+                height: 40px;
+                width: 40px;
+                fill: white;
+            }
+
+            background-color: $color-green;
+            &:nth-child(3){
+                background-color: $color-green-3;
+            }
+        }
+
+    }
+
+    .flickity-page-dots{
+        bottom: auto;
+        top: 60px;
+        right: 60px;
+        width: auto;
+
+        li{
+            border-radius: 0;
+            height:20px;
+            width: 22px;
+            background-color: white;
+            opacity: .7;
+
+            &.is-selected{
+                background-color: $color-green-3;
+                opacity: .7;
+            }
+        }
+
+    }
+
+}
+

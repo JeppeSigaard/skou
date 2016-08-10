@@ -1,0 +1,64 @@
+.top-menu-expand{
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 80px;
+    width: 70px;
+    fill: $color-light-5;
+    svg{
+        @include center(true,true);
+        height: 20px;
+        width: 20px;
+    }
+
+    @media only screen and(min-width:768px){
+        display: none;
+    }
+
+}
+
+.header-top-menu{
+    display: none;
+    @media only screen and(min-width:768px){
+        display: inline-block;
+    }
+
+    float: right;
+    height: 80px;
+    line-height: 80px;
+
+    ul{
+        font-size: 0;
+        padding: 0px 20px;
+    }
+
+    li{
+
+        display: inline-block;
+        @extend %font-size;
+    }
+
+    li:first-child a:before{
+        content: '';
+        display: none;
+    }
+
+    a{
+        &:before{
+            content: '·';
+            padding: 0px 10px;
+            display: inline-block;
+        }
+
+        font-size: 80%;
+        color: $color-dark-2;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+    }
+
+
+
+}
