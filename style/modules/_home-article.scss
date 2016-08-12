@@ -15,7 +15,7 @@
         }
 
         h1{
-            text-transform: uppercase;
+            @extend .section-header;
             height: 30px;
             box-sizing: content-box;
             border-bottom: 3px solid rgba(black,.1);

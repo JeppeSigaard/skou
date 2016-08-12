@@ -39,7 +39,6 @@
                 'menu_class' => 'site-main-menu',
             )); ?>
 
-            <a href="#" class="header-cta">Bliv kontaktet</a>
             <form class="header-search-form" action="" method="get">
                 <input type="text" name="s">
                 <input type="submit">

@@ -1,10 +1,35 @@
 a.header-logo{
-    height: 80px;
-    line-height: 80px;
-    width: 280px;
-    padding: 0px 30px;
-    display: inline-block;
+    position: fixed;
+    z-index: 101;
+    height: 55px;
+    line-height: 55px;
+    top: 1px;
+    left: 10px;
+    font-size: 15px;
+    padding: 0;
     color: $color-green-3;
     font-weight: 700;
-    font-size: 150%;
+}
+
+@media (min-width:480px){
+
+    a.header-logo{
+        left: 20px;
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width:640px){
+
+    a.header-logo{
+        position: relative;
+        height: 80px;
+        line-height: 80px;
+        width: 280px;
+        padding: 0px 30px;
+        display: inline-block;
+        font-size: 150%;
+    }
+
 }

@@ -1,4 +1,22 @@
 <?php
+
+
+get_functions_part(array(
+    'menu',
+    'scripts',
+    'images',
+));
+
+get_functions_part(array(
+    'reference',
+    'medarbejder',
+    'ikon',
+),'post-types');
+
+
+
+
+
 // email
 function sendEmail( $from_name, $from, $to, $subject, $message ){
     $header = "From: ".$from_name." <".$from.">\r\n";
@@ -21,7 +39,3 @@ function get_functions_part($fetch, $in = false){
     else{smamo_include_functions_part_if_exists($fetch,$in);}
 }
 
-get_functions_part(array(
-    'menu',
-    'scripts',
-));

@@ -1,9 +1,13 @@
 .top-menu-expand{
     position: relative;
-    display: inline-block;
+    display: none;
+    @media only screen and(min-width:640px){
+        display: inline-block;
+    }
+
     float: right;
     height: 80px;
-    width: 70px;
+    width: 50px;
     fill: $color-light-5;
     svg{
         @include center(true,true);

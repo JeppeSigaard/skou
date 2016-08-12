@@ -3,7 +3,7 @@
 
     &:before{
         content: '';
-        position: fixed;
+        position: absolute;
         @extend %fill-all;
         background-color: rgba(white,.7);
         z-index: 100000;
@@ -16,7 +16,11 @@
         @include center(true,true);
         @extend %fill-bg;
         z-index: 100001;
-        position: fixed;
         background-image: url(../statics/ring-alt.gif);
     }
+}
+
+body.loading:before,
+body.loading:after{
+    position: fixed;
 }

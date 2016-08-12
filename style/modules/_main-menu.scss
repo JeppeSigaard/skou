@@ -1,12 +1,27 @@
+
+
+$menu-height-small: 50px;
+$menu-height: 60px;
+
+%menu-height{
+
+    height: $menu-height-small;
+    line-height: $menu-height-small;
+
+    @media only screen and(min-width:640px){
+        height: $menu-height;
+        line-height: $menu-height;
+    }
+
+
+}
+
 .header-fixed{
-    height: 63px;
-    line-height: 60px;
+    @extend %menu-height;
 
 }
 
 .main-menu{
-    height: inherit;
-    line-height: inherit;
     width: 100%;
     top: 0;
     position: relative;
@@ -33,19 +48,18 @@
     }
 
     display: none;
-    height: inherit;
-    line-height: inherit;
+    @extend %menu-height;
     text-align: right;
-    padding: 0px 10px;
 
     li{
         display: inline-block;
+        @extend %menu-height;
     }
 
     a{
-        height: inherit;
+        display: block;
+        @extend %menu-height;
         padding: 0px 10px;
-        line-height: inherit;
         color: $color-dark-2;
         font-weight: 400;
         text-transform: uppercase;
@@ -59,6 +73,29 @@
         }
 
     }
+
+    li.header-cta a{
+        font-weight: 400;
+        background-color: $color-green;
+        width: auto;
+        padding: 0px 25px;
+        color: white;
+
+        &:hover{
+            background-color: darken($color-green,5);
+            color: white;
+
+        }
+
+        font-size: 12px;
+        @media only screen and(min-width:768px){
+            font-size: 14px;
+        }
+
+        @media only screen and(min-width:960px){
+            font-size: 15px;
+        }
+}
 }
 
 .header-search-form{
@@ -72,42 +109,32 @@ a.header-cta,
 a.header-hamburger{
     position: relative;
     display: inline-block;
-    height: 60px;
-    width: 70px;
+    @extend %menu-height;
+    width: 55px;
+    @media only screen and(min-width:640px){
+        width: 70px;
+    }
+
     color: white;
     fill: white;
     transition: background-color 120ms;
 
     svg{
         @include center(true,true);
-        width: 30px;
-        height: 30px;
+
+        width: 20px;
+        height: 20px;
+
+        @media only screen and(min-width:640px){
+            width: 30px;
+            height: 30px;
+
+        }
+
     }
 }
 
-a.header-cta{
-    display: none;
-    text-transform: uppercase;
-    font-weight: 400;
-    background-color: $color-green;
-    width: auto;
-    padding: 0px 25px;
 
-    &:hover{
-        background-color: darken($color-green,5);
-        color: white;
-
-    }
-
-    font-size: 12px;
-    @media only screen and(min-width:768px){
-        font-size: 14px;
-    }
-
-    @media only screen and(min-width:960px){
-        font-size: 15px;
-    }
-}
 
 
 a.header-search{
@@ -135,10 +162,6 @@ a.header-search{
     }
 
 @media only screen and(min-width:700px){
-
-    a.header-cta{
-        display: inline-block;
-    }
 
     a.header-search{
         background-color: $color-green-2;
