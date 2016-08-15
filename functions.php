@@ -77,15 +77,17 @@ function smamo_share($id = false, $platform = false){
             $link .= '&summary=' . urlencode(wp_trim_words(wp_strip_all_tags($share_post->post_content), $num_words = 20, $more = null));
         }
 
-        $link .= '&souce=' . urlencode(get_bloginfo('url'));
+        $link .= '&source=' . urlencode(get_bloginfo('url'));
 
 
         return $link;
-
     }
 }
 
+function smamo_pdf_link($id){
 
+
+}
 
 
 
