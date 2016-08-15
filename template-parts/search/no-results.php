@@ -1,6 +1,6 @@
 <section class="no-results section-padding ">
     <header class="section-header max-width">
-        <h1><?php echo ( is_404() ) ? 'Siden ikke fundet' : '0 resultater for "' .  esc_attr($_GET['s']) . '"'; ?></h1>
+        <h1><?php echo ( isset($_GET['s']) ) ? '0 resultater for "' .  esc_attr($_GET['s']) . '"' : 'Siden ikke fundet'; ?></h1>
     </header>
     <div class="max-width">
         <form action="<?php echo esc_url(get_bloginfo('url')) ?>" method="get" class="no-res-search-form">
