@@ -15,7 +15,7 @@
         width: 20px;
     }
 
-    @media only screen and(min-width:768px){
+    @media only screen and(min-width:800px){
         display: none;
     }
 
@@ -23,7 +23,7 @@
 
 .header-top-menu{
     display: none;
-    @media only screen and(min-width:768px){
+    @media only screen and(min-width:800px){
         display: inline-block;
     }
 

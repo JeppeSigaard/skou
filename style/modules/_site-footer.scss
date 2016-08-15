@@ -1,0 +1,41 @@
+.site-footer{
+
+    .footer-address,
+    .footer-directory{
+
+        text-align: center;
+        color: $color-green-3;
+        font-size: 85%;
+        line-height: 1.5;
+        vertical-align: top;
+
+        span,a{
+            display: block;
+
+            @media only screen and(min-width:640px){
+
+                display: inline-block;
+
+                &:before{
+                    content: '·';
+                    display: inline-block;
+                    width: 25px;
+                }
+
+                &:first-child:before{
+                    display: none;
+                }
+
+            }
+
+
+        }
+
+    }
+
+    .footer-address{
+        margin-bottom: 10px;
+    }
+
+
+}

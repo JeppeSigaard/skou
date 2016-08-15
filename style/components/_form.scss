@@ -1,0 +1,104 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color-dark-2;
+    font-style: italic;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $color-dark-2;
+    font-style: italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: $color-dark-2;
+    font-style: italic;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $color-dark-2;
+    font-style: italic;
+}
+
+.no-res-search-form{
+    padding-bottom: 30px;
+}
+
+fieldset{
+    position: relative;
+    font-size: 0;
+    height: 40px;
+    line-height: 40px;
+
+
+    input{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 45px);
+        height: inherit;
+        line-height: inherit;
+        padding: 0px 10px;
+        font-size: 12px;
+        @media only screen and(min-width:640px){
+            font-size: 13px;
+        }
+         @media only screen and(min-width:768px){
+            font-size: 14px;
+        }
+
+        background-color: $color-light;
+        color: $color-dark-2;
+    }
+
+    label{
+        display: block;
+        height: inherit;
+        line-height: inherit;
+        font-size: 12px;
+
+    }
+
+    .icon{
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 45px;
+        background-color: $color-green;
+        height: inherit;
+
+        input{
+            font-size: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        svg{
+            @include center(true,true);
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    }
+
+    &.large{
+
+        height: 50px;
+        line-height: 50px;
+
+        input{
+            width: calc(100% - 55px);
+            font-size: 16px;
+        }
+
+        .icon{
+            width: 55px;
+
+            svg{
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+    }
+
+}

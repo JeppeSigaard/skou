@@ -30,7 +30,7 @@ $menu-height: 60px;
     text-align: right;
     font-size: 0;
     z-index: 100;
-    box-shadow: 1px 1px 3px 0px rgba(black,.05);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.05) inset;
 
     *{
         vertical-align: top;
@@ -117,7 +117,7 @@ a.header-hamburger{
 
     color: white;
     fill: white;
-    transition: background-color 120ms;
+    transition: background-color 120ms, margin-right 120ms;
 
     svg{
         @include center(true,true);

@@ -6,23 +6,14 @@
         <div class="article-img loading" data-bg="<?php echo esc_url($image_url[0]) ?>"></div>
         <?php endif; ?>
         <article <?php post_class();  ?>>
-            <header class="article-header">
-                <h1 class="article-title"><?php the_title(); ?></h1>
-                <?php if ('post' === get_post_type(get_the_ID())) : ?>
-                <div class="article-byline">
-                    <span class="article-date"><?php the_date('d. F Y') ?></span>
-                    <a href="#"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
-                    <a href="#"><svg><use xlink:href="#icon-facebook"></use></svg></a>
-                </div>
-                <?php endif; ?>
-            </header>
+            <?php get_template_part('template-parts/common/article-header'); ?>
             <div class="article-content wp-styles">
                 <?php the_content(); ?>
             </div>
         </article>
     </main>
     <aside class="article-aside">
-        <div class="aside-inner fixed-aside">
+        <div class="aside-inner fixed-aside<?php echo (has_post_thumbnail()) ? ' no-padding' : ' padding'; ?>">
             <?php get_sidebar(); ?>
         </div>
     </aside>

@@ -24,6 +24,7 @@
         @media only screen and(min-width:960px){
 
              width: calc( 100% / 3);
+
         }
 
     }
@@ -59,7 +60,7 @@
         height: 40px;
         line-height: 40px;
         background-color: $color-light-2;
-        box-shadow: 1px 1px 3px 0px rgba(black,.1);
+        box-shadow: 1px 0px 0px 1px rgba(black,.05);
         z-index: 3;
 
         .item-footer-date{
@@ -94,7 +95,7 @@
 
     @media only screen and(min-width:640px){
 
-        .list-item:first-child{
+        &.big-first .list-item:first-child{
             width:100% ;
 
             @media only screen and(min-width:960px){
@@ -124,5 +125,31 @@
                 }
             }
         }
+    }
+}
+
+
+.item-list.internal{
+    padding: 50px 0px;
+}
+
+@media only screen and(min-width:960px){
+
+    .item-list.internal{
+        margin: 0;
+    }
+
+    .item-list.internal .list-item{
+
+        width: calc( 100% / 2);
+
+    }
+
+    .list-width{
+        display: inline-block;
+        width: 100%;
+        max-width: calc(#{$page-max-width} / 3 * 2);
+        text-align: left;
+
     }
 }

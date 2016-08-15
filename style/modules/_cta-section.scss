@@ -1,4 +1,139 @@
 .cta-section{
 
+    background-color: $color-light;
 
+
+}
+
+.cta-header{
+    margin-bottom: 30px;
+    @media only screen and(min-width:480px){margin-bottom: 40px;}
+    @media only screen and(min-width:768px){margin-bottom: 50px;}
+    @media only screen and(min-width:960px){margin-bottom: 70px;}
+
+    text-align: center;
+
+    span{
+        display: block;
+        margin-bottom: 20px
+    }
+
+    a{
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: $color-green;
+        color: white;
+        text-transform: uppercase;
+        font-size: 150%;
+    }
+
+}
+
+
+.staff-list{
+    font-size: 0;
+}
+
+.staff-item{
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    .staff-img{
+        padding-bottom: 75%;
+    }
+
+    .staff-name{
+        font-weight: 700;
+        padding: 10px 10px 5px;
+    }
+
+    .staff-position{
+        font-style: italic;
+        padding: 0px 10px 15px;
+        color: $color-dark-2;
+    }
+
+    .staff-email,
+    .staff-phone{
+        padding: 5px 10px;
+        display: block;
+    }
+
+}
+
+@media only screen and(min-width:480px){
+
+    .staff-list{
+        margin: -10px;
+
+
+        .staff-item{
+            width: 50%;
+            border: 10px solid $color-light;
+            margin-bottom: 10px;
+
+        }
+
+        &.has-5 .staff-item:first-child{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and(min-width:640px){
+
+    .staff-list{
+
+        .staff-item{
+            width: calc(100% / 3);
+        }
+
+        &.has-4 .staff-item{
+            width:50%;
+        }
+
+        &.has-5 .staff-item:first-child,
+        &.has-5 .staff-item:nth-child(2),{
+            width: 50%;
+        }
+    }
+
+}
+
+@media only screen and(min-width:960px){
+
+    .staff-list{
+
+        margin: -15px;
+
+        .staff-item{
+            border: 15px solid $color-light;
+        }
+
+        &.has-3 .staff-item{
+            width: calc(100% / 3);
+        }
+
+        &.has-4 .staff-item{
+            width: calc(100% / 4);
+        }
+
+        &.has-5 .staff-item,
+        &.has-5 .staff-item:first-child,
+        &.has-5 .staff-item:nth-child(2){
+            width: calc(100% / 5);
+        }
+
+        &.has-6 .staff-item{
+            width: calc(100% / 6);
+        }
+
+        &.has-7 .staff-item{
+            width: calc(100% / 7);
+        }
+    }
 }

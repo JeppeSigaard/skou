@@ -27,9 +27,26 @@ a.header-logo{
         height: 80px;
         line-height: 80px;
         width: 280px;
-        padding: 0px 30px;
         display: inline-block;
         font-size: 150%;
+    }
+
+}
+
+
+@media (min-width:768px){
+
+    a.header-logo{
+        width: 320px;
+        font-size: 28px;
+    }
+
+}
+
+@media (min-width:960px){
+
+    a.header-logo{
+        padding: 0px 10px;
     }
 
 }

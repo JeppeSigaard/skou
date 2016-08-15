@@ -1,0 +1,67 @@
+.ref-meta{
+    font-size: 90%;
+    margin-bottom: 30px;
+
+}
+
+.ref-meta-header{
+
+    padding: 30px 15px;
+    color: $color-dark-2;
+    background-color: $color-light;
+    font-size: 120%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.ref-meta-info{
+    padding: 0px 15px 30px;
+    color: $color-light-6;
+    background-color: $color-light;
+    margin-bottom: 30px;
+    line-height: 2;
+    overflow: auto;
+
+    dt{
+        float: left;
+        clear: left;
+        width: 50%;
+        max-width:150px;
+        font-weight: 700;
+    }
+
+    dd{
+        float: left;
+    }
+
+}
+
+.ref-meta-footer{
+
+    height: 50px;
+    line-height: 50px;
+    color: $color-light-6;
+    background-color: $color-light;
+    text-transform: uppercase;
+    padding-left: 15px;
+
+
+    a{
+        float: right;
+        display: inline-block;
+        position: relative;
+        width: 55px;
+        height: 50px;
+        background-color: $color-green;
+
+        &:nth-child(2){background-color : $color-green-3;}
+        fill: white;
+
+        svg{
+            @include center(true,true);
+            height: 22px;
+            width: 22px;
+        }
+    }
+}

@@ -24,7 +24,7 @@
 
 }
 
-$article-header-height: 40px;
+$article-header-height: 50px;
 
 .article-header{
 
@@ -34,7 +34,7 @@ $article-header-height: 40px;
 
     h1{
         @extend .section-header;
-
+        margin-bottom: 0;
         display: block;
         height: $article-header-height;
         line-height: $article-header-height;
@@ -80,6 +80,7 @@ $article-header-height: 40px;
     @extend %font-size;
     display: inline-block;
     vertical-align: top;
+    width: 100%;
 }
 
 @media only screen and(min-width:960px){
@@ -111,7 +112,11 @@ $article-header-height: 40px;
     .aside-inner{
         max-width: calc( (#{$page-max-width} / 3 ) - 15px);
         min-height: 400px;
-        background: green;
+        padding-top: 47px;
+
+        &.no-padding{
+            padding-top: 0;
+        }
 
         &.fixed{
             position: fixed;

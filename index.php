@@ -11,7 +11,7 @@ $template = array(
 
     'search'    => is_search(),
 
-    'archive'   => is_home() || is_archive(),
+    'archive'   => is_home() || is_archive() || is_tax('referencer'),
 
     'single'    => is_singular() || is_single(),
 

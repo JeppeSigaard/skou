@@ -1,0 +1,37 @@
+.sidebar-menu{
+    border-top: 3px solid $color-green;
+    border-bottom: 3px solid $color-green;
+    padding: 20px 0px;
+    margin-bottom: 47px;
+
+    .menu-parent{
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-size: 110%;
+        text-transform: uppercase;
+    }
+
+    li{
+        line-height: 1.8;
+        font-size: 90%;
+        color: $color-light-6;
+        transition: color 120ms;
+
+        &:hover,
+        &.current-menu-item{
+            color: $color-dark-2;
+        }
+
+
+        .date{
+            display: block;
+            font-style: italic;
+            font-size: 90%;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+}

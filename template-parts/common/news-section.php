@@ -3,6 +3,7 @@
 $news = new WP_Query(array(
     'post_type' => 'post',
     'posts_per_page' => 5,
+    'post__not_in' => array(get_the_ID()),
 
 ));
 
@@ -16,7 +17,7 @@ if($news->have_posts()) :
         <header class="section-header">
             <h2>Aktuelt</h2>
         </header>
-        <div class="item-list">
+        <div class="item-list big-first">
             <?php
                 while ($news->have_posts() ){
                     $news->the_post();
