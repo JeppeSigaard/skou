@@ -20,12 +20,12 @@ if($banner_items->have_posts()) :
 
         $box_title = get_post_meta(get_the_ID(),'page_slide_title',true);
     ?>
-    <div class="banner-item loading" data-bg="<?php echo (isset($box_img[0])) ? esc_url($box_img[0]) : esc_url($image_url[0]) ?>">
-        <a href="#" class="banner-overlay"></a>
+    <div class="banner-item loading" data-bg="<?php echo (isset($box_img[0])) ? esc_url($box_img[0]) : esc_url($def_img[0]) ?>">
+        <a href="<?php the_permalink() ?>" class="banner-overlay"></a>
         <footer class="banner-item-footer">
             <h2><?php echo ($box_title !== '') ? esc_attr($box_title) : esc_attr(get_the_title()); ?></h2>
-            <a href="<?php the_permalink() ?>"><svg><use xlink:href="#icon-right"></use></svg></a>
-            <a href="#"><svg><use xlink:href="#icon-print"></use></svg></a>
+            <a target="blank" href="<?php the_permalink() ?>"><svg><use xlink:href="#icon-right"></use></svg></a>
+            <a target="blank" href="<?php echo smamo_pdf_link(get_the_ID()); ?>"><svg><use xlink:href="#icon-print"></use></svg></a>
         </footer>
     </div>
     <?php endwhile; ?>

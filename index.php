@@ -1,7 +1,7 @@
 <?php
 global $wp_query;
 if (isset($_GET['pdf']) || isset($wp_query->query_vars['pdf'])){
-    get_template_part('template-parts/pdf/generator');
+    get_template_part('template-parts/pdf/index');
 }
 
 else{

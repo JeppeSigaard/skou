@@ -11,7 +11,6 @@ Kirki::add_field( 'siteinfo', array(
     'type'        => 'text',
     'settings'    => 'info_name',
     'label'       => esc_attr__( 'Firmanavn', 'smamo' ),
-    'help'        => esc_attr__( 'Globale instillinger for firmanavn, adresse, email osv. er fallback og kan overskrives for enkelte sider.', 'smamo'),
     'section'     => 'title_tagline',
     'default'     => '',
     'priority'    => 10,

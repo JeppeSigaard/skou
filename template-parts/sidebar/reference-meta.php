@@ -18,7 +18,7 @@ $meta_info = get_post_meta(get_the_ID(),'meta_data',true) or false;
     <?php endif;  ?>
     <footer class="ref-meta-footer">
         <span>Download sag</span>
-        <a href="#"><svg><use xlink:href="#icon-download"></use></svg></a>
-        <a href="#"><svg><use xlink:href="#icon-print"></use></svg></a>
+        <a href="<?php echo smamo_pdf_link(get_the_ID(),true); ?>"><svg><use xlink:href="#icon-download"></use></svg></a>
+        <a href="<?php echo smamo_pdf_link(get_the_ID()); ?>"><svg><use xlink:href="#icon-print"></use></svg></a>
     </footer>
 </div>

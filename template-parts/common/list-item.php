@@ -23,8 +23,8 @@ $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
         <a target="blank" href="<?php echo smamo_share(get_the_ID(),'li') ?>"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
         <a target="blank" href="<?php echo smamo_share(get_the_ID(),'fb') ?>"><svg><use xlink:href="#icon-facebook"></use></svg></a>
         <?php elseif ('reference' === get_post_type(get_the_ID())) : ?>
-        <a href="#"><svg><use xlink:href="#icon-download"></use></svg></a>
-        <a href="#"><svg><use xlink:href="#icon-print"></use></svg></a>
+        <a target="blank" href="<?php echo smamo_pdf_link(get_the_ID(),true); ?>"><svg><use xlink:href="#icon-download"></use></svg></a>
+        <a target="blank" href="<?php echo smamo_pdf_link(get_the_ID()); ?>"><svg><use xlink:href="#icon-print"></use></svg></a>
         <?php endif; ?>
     </footer>
 </article>

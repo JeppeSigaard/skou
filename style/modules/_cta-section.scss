@@ -41,9 +41,11 @@
     background-color: white;
     padding-bottom: 20px;
     margin-bottom: 30px;
+    vertical-align: top;
 
     .staff-img{
         padding-bottom: 75%;
+        @extend %fill-bg;
     }
 
     .staff-name{

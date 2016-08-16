@@ -2,12 +2,12 @@
 
 /*
 Title: Widgetområder
-Post Type: page
+Post Type: page, post, reference
 scope: post_meta
 order: 2
 */
 
-
+/*
 $widget_areas = array(
     'none' => '(vælg fra listen)',
     'widget-area-1' => 'Område 1',
@@ -31,6 +31,7 @@ piklist('field',array(
 
 piklist('field',array(
     'type' => 'select',
+    'columns' => 8,
     'conditions' => array(
         array(
             'field' => 'page_widgets_active',
@@ -44,3 +45,4 @@ piklist('field',array(
     'add_more' => true,
     'label' => __('Vælg områder'),
 ));
+*/

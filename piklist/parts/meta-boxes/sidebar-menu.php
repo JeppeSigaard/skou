@@ -1,4 +1,28 @@
 <?php
+/*
+Title: Sidebarens menu
+Post Type: page, post, reference
+scope: post_meta
+order: 1
+*/
+
+/*
+global $post;
+$auto_desc = '';
+switch (get_post_type($post->ID)){
+
+    case 'post':
+        $auto_desc = 'Seneste nyheder (standard)';
+        break;
+
+    case 'page':
+        $auto_desc = 'En menu af undersider (standard)';
+        break;
+
+    case 'reference':
+        $auto_desc = 'En menu af referencekategorier';
+        break;
+}
 
 $menu_array = array(
     '0' => '(vælg menu fra listen)'
@@ -8,20 +32,13 @@ foreach($menus as $menu){
     $menu_array[$menu->term_id] = $menu->name;
 }
 
-/*
-Title: Sidebarens menu
-Post Type: page
-scope: post_meta
-order: 1
-*/
-
 piklist('field',array(
     'type' => 'select',
     'field' => 'sidemenu_select',
     'value' => 'auto',
     'label' => __('I sidebaren, vis','smamo'),
     'choices' => array(
-        'auto' => 'En menu af undersider (standard)',
+        'auto' => $auto_desc,
         'custom' => 'En tilpasset menu',
         'none' => 'Ingen menu',
     ),
@@ -39,3 +56,4 @@ piklist('field',array(
     ),
     'choices' => $menu_array,
 ));
+*/

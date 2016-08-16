@@ -36,7 +36,6 @@ $article-header-height: 50px;
         @extend .section-header;
         margin-bottom: 0;
         display: block;
-        height: $article-header-height;
         line-height: $article-header-height;
         border-bottom: 3px solid $color-green-3;
     }

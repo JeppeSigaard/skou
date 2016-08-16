@@ -23,9 +23,6 @@ get_functions_part(array(
 ),'terms');
 
 
-
-
-
 // email
 function sendEmail( $from_name, $from, $to, $subject, $message ){
     $header = "From: ".$from_name." <".$from.">\r\n";
@@ -84,9 +81,13 @@ function smamo_share($id = false, $platform = false){
     }
 }
 
-function smamo_pdf_link($id){
-
-
+function smamo_pdf_link($id,$download = false){
+    if($download){
+        return esc_url(get_bloginfo('url') .'/pdf/'. $id .'/?d=1');
+    }
+    else{
+        return esc_url(get_bloginfo('url') .'/pdf/'. $id .'/');
+    }
 }
 
 
