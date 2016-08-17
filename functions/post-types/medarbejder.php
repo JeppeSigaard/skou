@@ -6,8 +6,8 @@ function smamo_add_medarbejder() {
 	register_post_type( 'medarbejder', array(
 
         'menu_icon' 		 => 'dashicons-businessman',
-		'public'             => true,
-		'publicly_queryable' => true,
+		'public'             => false,
+		'publicly_queryable' => false,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,

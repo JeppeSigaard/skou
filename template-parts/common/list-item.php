@@ -1,6 +1,12 @@
 <?php
 
 $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'widescreen-half' );
+if(!isset($image_url[0])){
+    $image_url = array(
+        0 => get_template_directory_uri() . '/statics/def.jpg',
+    );
+
+}
 
 ?>
 

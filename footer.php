@@ -1,4 +1,5 @@
 <?php get_template_part('template-parts/common/cta-section'); ?>
+<?php get_template_part('template-parts/common/cta-form'); ?>
 <footer class="site-footer section-padding">
     <div class="inner">
         <div class="footer-address">

@@ -6,8 +6,8 @@ function smamo_add_ikon() {
 	register_post_type( 'ikon', array(
 
         'menu_icon' 		 => 'dashicons-tag',
-		'public'             => true,
-		'publicly_queryable' => true,
+		'public'             => false,
+		'publicly_queryable' => false,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,

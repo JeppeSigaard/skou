@@ -5,6 +5,7 @@ get_functions_part(array(
     'menu',
     'scripts',
     'images',
+    'widgets',
 ));
 
 get_functions_part(array(
@@ -16,6 +17,7 @@ get_functions_part(array(
 
 get_functions_part(array(
     'siteinfo',
+    'cta',
 ),'kirki');
 
 get_functions_part(array(

@@ -2,8 +2,10 @@
 
 /*
 Title: Tilføj til forsidens slideshow
-Post Type: reference
+Post Type: reference, page, post
 order: 10
+Flow: Reference flow, Post flow, Page flow
+Tab: Forsidens slider
 
 */
 

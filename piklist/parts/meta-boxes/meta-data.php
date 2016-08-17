@@ -1,10 +1,12 @@
 <?php
 
 /*
-Title: Metadata
+Title: Faktaboks
 Post Type: reference
 scope: post_meta
 order: 1
+Flow: Reference flow
+Tab: Faktaboks
 */
 
 piklist('field', array(

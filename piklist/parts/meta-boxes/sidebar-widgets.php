@@ -5,17 +5,19 @@ Title: Widgetområder
 Post Type: page, post, reference
 scope: post_meta
 order: 2
+Flow: Page flow, Reference Flow, Post Flow
+Tab: Widgets
 */
 
-/*
+
 $widget_areas = array(
     'none' => '(vælg fra listen)',
-    'widget-area-1' => 'Område 1',
-    'widget-area-2' => 'Område 2',
-    'widget-area-3' => 'Område 3',
-    'widget-area-4' => 'Område 4',
-    'widget-area-5' => 'Område 5',
-    'widget-area-6' => 'Område 6',
+    'widget-area-1' => 'Widget Område 1',
+    'widget-area-2' => 'Widget Område 2',
+    'widget-area-3' => 'Widget Område 3',
+    'widget-area-4' => 'Widget Område 4',
+    'widget-area-5' => 'Widget Område 5',
+    'widget-area-6' => 'Widget Område 6',
 );
 
 
@@ -45,4 +47,3 @@ piklist('field',array(
     'add_more' => true,
     'label' => __('Vælg områder'),
 ));
-*/

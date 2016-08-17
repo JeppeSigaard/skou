@@ -5,6 +5,7 @@
     p,ul,ol,li,h2,h3,h4,h5,h6{
         margin-bottom: .7rem;
         position: relative;
+        line-height: $base-line-height;
     }
     h2,h3,h4{
         font-weight: bold;

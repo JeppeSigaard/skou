@@ -4,7 +4,9 @@
 Title: Opret pdf
 Post Type: reference
 scope: post_meta
-order: 1
+order: 2
+Flow: Reference flow
+Tab: PDF
 */
 
 

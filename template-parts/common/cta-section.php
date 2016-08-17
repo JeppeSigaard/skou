@@ -1,25 +1,40 @@
 <?php
-$mb = new WP_Query(array(
-    'post_type' => 'medarbejder',
-    'posts_per_page' => -1,
-));
+
+if (get_theme_mod('cta_show') !== '0') :
+
+$cta_pre = (get_theme_mod('cta_pre_text') !== '') ? esc_attr(get_theme_mod('cta_pre_text')) : 'Skal vi arbejde sammen?';
+$cta_button = (get_theme_mod('cta_button_text') !== '') ? esc_attr(get_theme_mod('cta_button_text')) : 'Bliv kontaktet';
+$show_mb = (get_theme_mod('cta_show_mb') !== '0') ? true : false;
+
+
+if($show_mb){
+
+    $mb = new WP_Query(array(
+        'post_type' => 'medarbejder',
+        'posts_per_page' => -1,
+    ));
+
+}
 
 ?>
-
-
 <section class="cta-section section-padding">
     <div class="max-width">
         <header class="cta-header">
-            <span>Skal vi arbejde sammen?</span>
-            <a href="#" class="cta-button">Bliv kontaktet</a>
+            <span><?php echo $cta_pre ?></span>
+            <a href="#" class="cta-button cta-activate"><?php echo $cta_button ?></a>
         </header>
-        <?php if ($mb->have_posts()) : $num_posts = sizeof($mb->posts) ?>
+        <?php if ($show_mb && $mb->have_posts()) : $num_posts = sizeof($mb->posts) ?>
         <div class="staff-list has-<?php echo $num_posts ?>">
             <?php
 
             while ($mb->have_posts()) : $mb->the_post();
 
             $mb_pic = wp_get_attachment_image_src( get_post_meta(get_the_ID(),'mb_pic',true), 'profile' );
+            if(!isset($mb_pic[0])){
+                $mb_pic = array(
+                    0 => get_template_directory_uri() . '/statics/def.jpg',
+                );
+            }
             $mb_email = get_post_meta(get_the_ID(),'mb_email',true);
             $mb_phone = get_post_meta(get_the_ID(),'mb_phone',true);
 
@@ -36,3 +51,4 @@ $mb = new WP_Query(array(
         <?php endif; wp_reset_postdata(); ?>
     </div>
 </section>
+<?php endif;
