@@ -1,0 +1,77 @@
+.article-grid{
+    font-size: 0;
+    display: block;
+    margin: 10px -5px;
+
+
+    >a,
+    >div,
+    >p,
+    >img{
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        @extend %font-size;
+
+        padding: 5px;
+
+        >*{
+            border: 1px solid $color-dark-2;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and(min-width:480px){
+
+    .article-grid{
+        margin: 10px -10px;
+
+        >a,
+        >div,
+        >p,
+        >img{
+
+            width: 50%;
+            padding: 10px ;
+        }
+
+    }
+
+
+}
+
+
+@media only screen and(min-width:768px){
+
+    .article-grid{
+
+        >a,
+        >div,
+        >p,
+        >img{
+
+            width: calc(100% / 3);
+
+        }
+    }
+}
+
+@media only screen and(min-width:960px){
+
+    .article-grid{
+        margin: 10px -15px;
+
+        >a,
+        >div,
+        >p,
+        >img{
+
+            padding:15px;
+
+        }
+    }
+}

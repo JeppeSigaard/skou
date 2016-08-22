@@ -14,7 +14,7 @@ $submenu = new WP_Query(array(
 
 $parent = get_post($parent_id);
 
-
+if ($submenu->have_posts()) :
 
 ?>
 
@@ -26,3 +26,6 @@ $parent = get_post($parent_id);
         <?php endwhile; wp_reset_postdata(); ?>
     </ul>
 </nav>
+
+
+<?php endif; ?>
